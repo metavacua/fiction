@@ -1,0 +1,24 @@
+# Character Data: Elara
+# ---
+
+# Basic Information
+id: elara
+name: Elara
+description: A graceful and intelligent young woman, always impeccably dressed. She carries herself with an air of confidence that some find intimidating.
+possessive_pronoun: "her"
+
+# Relationships
+relationships:
+  - character_id: kiera
+    type: rival
+    description: Elara sees Kiera as a worthy, if infuriating, competitor.
+
+# Knowledge
+knowledge:
+  - event_id: "01-meeting"
+    details: "She is waiting for Kiera in the market square, as arranged."
+
+# Inventory
+inventory:
+  - item_id: "ivory-fan"
+    quantity: 1

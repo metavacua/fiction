@@ -1,0 +1,29 @@
+# Character Template
+# ---
+# This file defines the structure for a character's data.
+# All character files should follow this format.
+# ---
+
+# Basic Information
+id: # Unique identifier for the character (e.g., "kiera")
+name: # Full name of the character (e.g., "Kiera")
+description: # A brief description of the character's appearance and personality.
+
+# Relationships
+# A list of other characters and the nature of their relationship.
+relationships:
+  - character_id: # The 'id' of the other character
+    type: # The type of relationship (e.g., "friend", "rival", "family")
+    description: # A brief description of the relationship
+
+# Knowledge
+# A list of facts or events the character is aware of.
+knowledge:
+  - event_id: # The 'id' of a scene or event
+    details: # What the character knows about this event
+
+# Inventory
+# A list of items the character is carrying.
+inventory:
+  - item_id: # The 'id' of an item
+    quantity: 1 # The number of items
