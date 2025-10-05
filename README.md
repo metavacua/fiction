@@ -69,12 +69,22 @@ The data model is defined by:
 *   **[A Model Definition](./story-bible-datamodel/MODEL.md):** Details each field of the Story Bible and its purpose.
 *   **[An Example](./story-bible-datamodel/example.yaml):** A practical, populated example for a fictional story.
 
+## Repository Standards & Best Practices
+
+This repository adheres to a set of standards to ensure stability, transparency, and data integrity.
+
+*   **[Agent Guidelines](./AGENTS.md):** All contributors, especially AI agents, must follow the principles outlined in `AGENTS.md`. This includes the mandate to verify information with external tools before starting new tasks.
+*   **CI & Data Validation:** The [`.github/workflows/ci.yml`](./.github/workflows/ci.yml) file defines a continuous integration pipeline that runs on every push. It automatically validates all `.yaml` files in the repository to prevent data corruption. For stability, all third-party GitHub Actions are pinned to specific commit hashes.
+*   **Activity Logging:** All major project milestones are logged in [`logs/activity.log`](./logs/activity.log) to provide a transparent, chronological record of the project's history.
+
 ## Proposed Repository Structure
 
-*   **`.github/workflows/`**: This directory will contain the GitHub Actions automation files (e.g., `main.workflow`).
+*   **`.github/workflows/`**: Contains the CI/CD automation files (e.g., `ci.yml`).
 *   **`copyright-datamodel/`**: Contains the ontology and examples for the creative provenance data model.
 *   **`story-bible-datamodel/`**: Contains the model definition and example for the SudoWrite Story Bible.
+*   **`logs/`**: Contains the `activity.log` file for the project.
 *   **`manuscript/`**: The main text of your story, with one file per chapter.
 *   **`world-anvil-sync/`**: A directory to hold scripts and data related to syncing with World Anvil.
 *   **`notes/`**: General project notes that don't fit into the structured lore of World Anvil.
-*   **`README.md`**: This file, outlining the workflow.
+*   **`AGENTS.md`**: Defines the core operating principles for AI agents.
+*   **`README.md`**: This file, outlining the workflow and standards.
