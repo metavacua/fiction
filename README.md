@@ -61,10 +61,19 @@ The data model is defined by:
 
 This model provides a robust framework for managing intellectual property in a collaborative human-AI writing process.
 
+## SudoWrite Story Bible Data Model
+
+To facilitate the programmatic management of the information that guides SudoWrite's AI, this project includes a local data model for its **Story Bible**. This allows us to version control the core creative inputs and automate their synchronization with other tools like World Anvil.
+
+The data model is defined by:
+*   **[A Model Definition](./story-bible-datamodel/MODEL.md):** Details each field of the Story Bible and its purpose.
+*   **[An Example](./story-bible-datamodel/example.yaml):** A practical, populated example for a fictional story.
+
 ## Proposed Repository Structure
 
 *   **`.github/workflows/`**: This directory will contain the GitHub Actions automation files (e.g., `main.workflow`).
 *   **`copyright-datamodel/`**: Contains the ontology and examples for the creative provenance data model.
+*   **`story-bible-datamodel/`**: Contains the model definition and example for the SudoWrite Story Bible.
 *   **`manuscript/`**: The main text of your story, with one file per chapter.
 *   **`world-anvil-sync/`**: A directory to hold scripts and data related to syncing with World Anvil.
 *   **`notes/`**: General project notes that don't fit into the structured lore of World Anvil.
