@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "cp": "https://example.com/creative-provenance#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "AuthorPrompt": "cp:AuthorPrompt",
+    "AIGeneratedSuggestion": "cp:AIGeneratedSuggestion",
+    "AuthorSelection": "cp:AuthorSelection",
+    "AuthorEdit": "cp:AuthorEdit",
+    "timestamp": {
+      "@id": "cp:timestamp",
+      "@type": "xsd:dateTime"
+    },
+    "actor": "cp:actor",
+    "copyrightStatus": "cp:copyrightStatus",
+    "content": "cp:content",
+    "basedOn": {
+      "@id": "cp:basedOn",
+      "@type": "@id"
+    },
+    "selectedSuggestion": {
+      "@id": "cp:selectedSuggestion",
+      "@type": "@id"
+    },
+    "finalText": "cp:finalText"
+  },
+  "@graph": [
+    {
+      "id": "cp:uuid-prompt-1",
+      "type": "AuthorPrompt",
+      "timestamp": "2025-10-05T14:20:00Z",
+      "actor": "human",
+      "copyrightStatus": "copyrightable",
+      "content": "Describe a futuristic city street after a rainstorm, focusing on the contrast between high-tech and decay."
+    },
+    {
+      "id": "cp:uuid-suggestion-1a",
+      "type": "AIGeneratedSuggestion",
+      "timestamp": "2025-10-05T14:20:05Z",
+      "actor": "ai",
+      "basedOn": "cp:uuid-prompt-1",
+      "copyrightStatus": "not_copyrightable",
+      "content": "The chrome towers glistened. Flying cars zipped by, their lights blurring in the wet air. The street was clean."
+    },
+    {
+      "id": "cp:uuid-suggestion-1b",
+      "type": "AIGeneratedSuggestion",
+      "timestamp": "2025-10-05T14:20:06Z",
+      "actor": "ai",
+      "basedOn": "cp:uuid-prompt-1",
+      "copyrightStatus": "not_copyrightable",
+      "content": "Rainwater dripped from neon signs, sizzling on the hot pavement below. The city smelled of ozone and wet metal. Reflections of the towering skyscrapers warped in the puddles."
+    },
+    {
+      "id": "cp:uuid-selection-1",
+      "type": "AuthorSelection",
+      "timestamp": "2025-10-05T14:21:00Z",
+      "actor": "human",
+      "copyrightStatus": "copyrightable_act",
+      "selectedSuggestion": "cp:uuid-suggestion-1b"
+    },
+    {
+      "id": "cp:uuid-edit-1",
+      "type": "AuthorEdit",
+      "timestamp": "2025-10-05T14:22:15Z",
+      "actor": "human",
+      "copyrightStatus": "copyrightable",
+      "basedOn": "cp:uuid-suggestion-1b",
+      "finalText": "Rainwater dripped from antique neon signs, sizzling on the synth-asphalt below. The city smelled of ozone and wet, rusting metal, a stark contrast to the pristine towers above. Shimmering reflections of the monolithic skyscrapers warped and danced in the oily puddles."
+    }
+  ]
+}

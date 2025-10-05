@@ -1,0 +1,48 @@
+# This file provides a human-readable example of the Creative Provenance data model.
+# It demonstrates the process of creating a single paragraph, tracking each step
+# from the author's initial prompt to the final, edited text.
+
+- creative_action:
+    id: "uuid-prompt-1"
+    timestamp: "2025-10-05T14:20:00Z"
+    actor: "human"
+    type: "AuthorPrompt"
+    copyright_status: "copyrightable"
+    content: "Describe a futuristic city street after a rainstorm, focusing on the contrast between high-tech and decay."
+
+- creative_action:
+    id: "uuid-suggestion-1a"
+    timestamp: "2025-10-05T14:20:05Z"
+    actor: "ai"
+    type: "AIGeneratedSuggestion"
+    based_on: "uuid-prompt-1"
+    copyright_status: "not_copyrightable"
+    content: "The chrome towers glistened. Flying cars zipped by, their lights blurring in the wet air. The street was clean."
+
+- creative_action:
+    id: "uuid-suggestion-1b"
+    timestamp: "2025-10-05T14:20:06Z"
+    actor: "ai"
+    type: "AIGeneratedSuggestion"
+    based_on: "uuid-prompt-1"
+    copyright_status: "not_copyrightable"
+    content: "Rainwater dripped from neon signs, sizzling on the hot pavement below. The city smelled of ozone and wet metal. Reflections of the towering skyscrapers warped in the puddles."
+
+- creative_action:
+    id: "uuid-selection-1"
+    timestamp: "2025-10-05T14:21:00Z"
+    actor: "human"
+    type: "AuthorSelection"
+    copyright_status: "copyrightable_act"
+    selected_suggestion: "uuid-suggestion-1b"
+
+- creative_action:
+    id: "uuid-edit-1"
+    timestamp: "2025-10-05T14:22:15Z"
+    actor: "human"
+    type: "AuthorEdit"
+    copyright_status: "copyrightable"
+    based_on: "uuid-suggestion-1b"
+    # The final text is the result of the author's edits on the selected suggestion.
+    # The edits themselves are the copyrightable expression.
+    final_text: "Rainwater dripped from antique neon signs, sizzling on the synth-asphalt below. The city smelled of ozone and wet, rusting metal, a stark contrast to the pristine towers above. Shimmering reflections of the monolithic skyscrapers warped and danced in the oily puddles."
