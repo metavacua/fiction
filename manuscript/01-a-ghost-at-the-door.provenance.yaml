@@ -1,0 +1,14 @@
+- creative_action:
+    id: uuid-generation-1
+    timestamp: '2025-10-06T23:45:32.958763Z'
+    actor: ai
+    type: AIGeneratedSuggestion
+    based_on: Story Bible Outline
+    copyright_status: not_copyrightable
+    content: '# A Ghost at the Door
+
+
+      Jax is hired by Alistair Finch to investigate the theft of a high-value memory.
+      Jax takes the case, despite his misgivings about working for a corporate giant.
+
+      '
