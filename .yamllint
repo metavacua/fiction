@@ -1,0 +1,11 @@
+rules:
+  line-length: disable
+  document-start: disable
+  new-line-at-end-of-file: enable
+  comments:
+    min-spaces-from-content: 1
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 0
+  truthy:
+    allowed-values: ['true', 'false', 'on']
